@@ -599,6 +599,9 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: 0;
+  padding: 72px 24px 24px 24px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -619,23 +622,40 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
   margin-left: auto;
   display: flex;
-  padding: 8px;
-  border-radius: 100%;
+  align-items: center;
+  justify-content: center; 
+  padding: 0px;
+  border-radius: 50%
+  border: 1px solid rgba(0, 0, 0, 0.1); 
   border-color: rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
   fill: #2e2f42;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover {
   background-color: #404bbf;
-  fill: #fff;
+  border: none;
+  fill: #ffffff;
+}
+
+..modal-close:focus{
+  fill: #ffffff;
+}
+
+.icon-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-item {
@@ -651,6 +671,11 @@ img {
   text-align: left;
   margin-bottom: 16px;
   margin-top: 24px;
+  text-align: center;
+}
+
+.modal-form-container {
+  margin-bottom: 8px; 
 }
 
 .modal-input {
@@ -662,11 +687,11 @@ img {
   margin-bottom: 8px;
   padding-left: 38px;
   outline: transparent;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal-input:focus {
-  border: 1px solid #4d5ae5;
+  border-color: #4D5AE5;
 }
 
 .modal-input:focus + .modal-icon {
@@ -676,11 +701,12 @@ img {
 .user-label {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   padding: 4px;
-  display: inline-block;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .modal-wrap {
@@ -693,6 +719,10 @@ img {
   top: 8px;
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-icon:hover{
+fill: #4D5AE5;
 }
 
 .modal-comment {
