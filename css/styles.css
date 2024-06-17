@@ -582,6 +582,11 @@ img {
   bottom: 8px;
 }
 
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background: #404bbf;
+}
+
 /*--------------------------------------------*/
 
 /*------------------ModalBox----------------------*/
@@ -749,6 +754,11 @@ img {
   background: #404bbf;
   border: none;
   fill: #f4f4fd;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background: #404bbf;
 }
 
 /*----------------------------------------------------*/
