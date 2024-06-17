@@ -554,28 +554,28 @@ img {
 }
 
 .footer-input::placeholder {
-  color: #ffffff;
+  color #ffffff; 
 }
 
 .footer-form-btn {
   position: relative;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
   display: flex;
   justify-content: center;
   text-align: center;
-  color: #fff;
-  background: #4d5ae5;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #4D5AE5;
   border-radius: 4px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   border: none;
-  color: #fff;
   padding: 8px 64px 8px 24px;
   align-items: center;
-  min-width: 165px;
 }
 
 .icon-botton-telegram {
